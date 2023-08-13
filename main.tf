@@ -1,14 +1,14 @@
 #this file consists of code for instances and sg
 provider "aws" {
 region = "eu-west-3"
-access_key = "AKIA36JX34OE4AXKSK7E"
-secret_key = "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"
+access_key = "AKIART33JO5YFKFWF26J"
+secret_key = "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"
 }
 
 resource "aws_instance" "one" {
-  ami             = "ami-0b8b5288592eca360"
+  ami             = "ami-06f7633a6b8e0fb0a"
   instance_type   = "t2.micro"
-  key_name        = "terrapem"
+  key_name        = "paris"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "eu-west-3a"
   user_data       = <<EOF
@@ -25,9 +25,9 @@ EOF
 }
 
 resource "aws_instance" "two" {
-  ami             = "ami-0b8b5288592eca360"
+  ami             = "ami-06f7633a6b8e0fb0a"
   instance_type   = "t2.micro"
-  key_name        = "terrapem"
+  key_name        = "paris"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "eu-west-3b"
   user_data       = <<EOF
@@ -44,9 +44,9 @@ EOF
 }
 
 resource "aws_instance" "three" {
-  ami             = "ami-0b8b5288592eca360"
+  ami             = "ami-06f7633a6b8e0fb0a"
   instance_type   = "t2.micro"
-  key_name        = "terrapem"
+  key_name        = "paris"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "eu-west-3a"
   tags = {
@@ -55,9 +55,9 @@ resource "aws_instance" "three" {
 }
 
 resource "aws_instance" "four" {
-  ami             = "ami-0b8b5288592eca360"
+  ami             = "ami-06f7633a6b8e0fb0a"
   instance_type   = "t2.micro"
-  key_name        = "terrapem"
+  key_name        = "paris"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "eu-west-3b"
   tags = {
@@ -90,7 +90,7 @@ resource "aws_security_group" "five" {
 }
 
 resource "aws_s3_bucket" "six" {
-  bucket = "rahamshaikterra7gsywgys7889900prodenvgshj"
+  bucket = "jinkavenky852582"
 }
 
 resource "aws_iam_user" "seven" {
